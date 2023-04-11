@@ -8,5 +8,5 @@ Here is a link to the website feel free to try it: https://vivekmohanta03.github
 
 # Issues
 - Update the UI
-- Add restart or endgame button
+- Add restart or endgame button (Resolved)
 - No multiplayer support
