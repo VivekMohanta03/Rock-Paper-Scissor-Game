@@ -21,42 +21,60 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="scores">
-        <p>
-          Computer :
-          <span id="computer_score">0</span>
-        </p>
-        <p>
-          You :
-          <span id="user_score">0</span>
-        </p>
+    <div class="heading">
+      <h1>ROCK🪨  PAPER📃  SCISSOR✂️</h1>
+    </div>
+    <div class="box">
+      <div class="container">
+        <div class="scores">
+          <div class="computer">
+            <i class="fa fa-robot"></i>
+              <p>
+                Computer :
+                <span id="computer_score">0</span>
+              </p>
+          </div>
+          <div class="user">
+            <i class="far fa-user"></i>
+              <p>
+                You :
+                <span id="user_score">0</span>
+              </p>
+          
+          </div>
+        </div>
+        
+        <div class="weapons" id="weapons">
+          <button onclick="checker('rock')">
+            <i class="far fa-hand-rock"></i>
+          </button>
+          <button onclick="checker('paper')">
+            <i class="far fa-hand-paper"></i>
+          </button>
+          <button onclick="checker('scissor')">
+            <i class="far fa-hand-scissors"></i>
+          </button>
+        </div>
+
+        
+          <div class="details">
+            <p id="user_choice"></p>
+            <p id="comp_choice"></p>
+          </div>
+          <div class="result-section">
+            <p id="result"></p>
+            <button
+              type="button"
+              id="restart"
+              value="Reload Page"
+              onclick="window.location.reload(true)"
+              style="display: none"
+            >
+              Restart Game
+            </button>
+          </div>
       </div>
-      <div class="weapons" id="weapons">
-        <button onclick="checker('rock')">
-          <i class="far fa-hand-rock"></i>
-        </button>
-        <button onclick="checker('paper')">
-          <i class="far fa-hand-paper"></i>
-        </button>
-        <button onclick="checker('scissor')">
-          <i class="far fa-hand-scissors"></i>
-        </button>
-      </div>
-      <div class="details">
-        <p id="user_choice"></p>
-        <p id="comp_choice"></p>
-        <p id="result"></p>
-      </div>
-      <button
-        type="button"
-        id="restart"
-        value="Reload Page"
-        onclick="window.location.reload(true)"
-        style="display: none"
-      >
-        Restart Game
-      </button>
+
     </div>
     <!--Script-->
     <script src="script.js"></script>
