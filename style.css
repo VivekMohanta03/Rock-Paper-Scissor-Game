@@ -1,3 +1,11 @@
+:root{
+  --primary-black: black;
+  --secondary-black: #171a1c;
+  --white: #fff;
+  --blue:#4070F4;
+  --section-background: #24272e;
+}
+
 *,
 *:before,
 *:after {
@@ -8,25 +16,45 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #ffcf1b, #ff8b1b);
+  background: var(--primary-black);
+  font-family: "Poppins", sans-serif;
+}
+
+.heading{
+  padding: 20px;
+  text-align: center;
+}
+
+h1{
+  color: var(--white);
+  font-size: 50px;
+
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  width: 45%;
+  width: 60%;
   min-width: 500px;
-  background-color: #ffffff;
-  padding: 40px 30px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  background-color: var(--secondary-black);
+  padding: 30px 30px;
   border-radius: 10px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 .scores {
-  margin-bottom: 50px;
-  text-align: right;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.scores p{
+  font-size: 20px;
 }
 
 .weapons {
@@ -36,9 +64,14 @@ body {
   justify-content: space-around;
 }
 
+.weapons i{
+  color: var(--white);
+}
+
+
 .weapons button {
-  background-color: #ffd51b;
-  color: #000000;
+  background-color: var(--blue);
+  color: var(--white);
   border: none;
   font-size: 50px;
   height: 100px;
@@ -46,26 +79,38 @@ body {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.weapons button:hover{
+  scale: 1.05;
+}
+
+.result-section{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
 }
 
 .details {
-  margin-top: 30px;
+  margin: 10px auto;
   text-align: center;
+  font-size: 20px;
 }
 
 .scores,
 .details {
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  color: var(--white);
 }
 
 #result {
-  width: 180px;
-  padding: 10px 0;
-  margin: 30px auto;
+  width: 50%;
+  padding: 25px;
+  margin: 5%;
   font-weight: 600;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
 #user_choice,
@@ -80,19 +125,29 @@ span {
 
 button {
   display: block;
-  margin: 5% auto;
-  background-color: #ffd51b;
-  padding: 12px 24px;
+  margin: 5%;
+  background-color: var(--blue);
+  padding: 10px 20px;
   text-decoration: none;
   border-radius: 8px;
   border: none;
-  color: #232931;
+  color: var(--white);
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+button:hover{
+  background-color: #335ccc
 }
 
 button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.1),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
+}
+
+@media screen and (max-width : 1024px) {
+  button, #result{
+    margin: 3%;
+  }
 }
